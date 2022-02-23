@@ -15,6 +15,8 @@ terraform output
 
 First the Receiver, second the Sender command in different terminals. 
 
+![](azure-vm-sockperf-test.png)
+
 
 ## Troubleshooting 
 
