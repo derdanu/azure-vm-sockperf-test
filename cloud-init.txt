@@ -1,0 +1,15 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - gcc
+  - build-essential
+  - autotools-dev
+  - automake
+  - autoconf
+  - libtool
+runcmd:
+  - git clone https://github.com/mellanox/sockperf /mnt/sockperf
+  - cd /mnt/sockperf
+  - ./autogen.sh 
+  - ./configure --prefix=/usr/local/
+  - make && make install
